@@ -7,10 +7,9 @@ class Main{
   public static void main (String [] args) {
 
     JFrame frame = new JFrame();
-    JOptionPane.showMessageDialog(frame,"Type a sentence:");
 
-    String response = JOptionPane.showInputDialog("");
-
+    String response = JOptionPane.showInputDialog("Type a sentence.");
+    
     Sentence sent1 = new Sentence(response);
     sent1.getBlankPositions();
     sent1.countWords();
@@ -23,6 +22,7 @@ class Main{
     for (String word : sent1.getWords())
     output3 += word + " ";
 
-    JOptionPane.showMessageDialog(frame, output3 + " This has " + output2 + " words and spaces located at " + output1);
+    JOptionPane.showMessageDialog(frame, output3 + " This sentence has " + output2 + " words and spaces located at " + output1);
+    System.exit(0);
   }
 }
